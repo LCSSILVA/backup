@@ -1,0 +1,28 @@
+op=op
+caminho=caminho
+COMPACTAR="compactar"
+COPIAR="copiar"
+
+
+echo digite o caminho do documento...
+read caminho
+
+echo deseja copiar, compactar?
+read op
+
+
+if test "$op" = "compactar"
+then
+tar -cvzf 000.tar.gz $caminho
+echo Compactando...
+
+fi
+
+if test "op" = "copiar"
+then
+cp $caminho /Documentos/Backup
+echo Copiando ...
+
+fi
+
+
